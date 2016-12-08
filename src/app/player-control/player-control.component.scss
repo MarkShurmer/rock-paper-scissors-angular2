@@ -1,0 +1,10 @@
+
+.player-moved {
+  opacity: 0.1;
+  transition: opacity 1s;
+}
+
+.player-moving {
+  opacity: 0.9;
+  transition: opacity 1s;
+}
