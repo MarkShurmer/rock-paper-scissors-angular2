@@ -8,6 +8,7 @@ import {PlayingPieceComponent} from "./playing-piece/playing-piece.component";
 import {ResultComponent} from "./result/result.component";
 import {PlayerControlComponent} from "./player-control/player-control.component";
 import {GameService} from "./game-service/game.service";
+import {ComputerMover} from './game-service/computer-mover';
 
 describe('App: RockPaperScissors', () => {
   beforeEach(() => {
@@ -20,7 +21,7 @@ describe('App: RockPaperScissors', () => {
         PlayerControlComponent,
         ResultComponent
       ],
-      providers: [GameService]
+      providers: [GameService, ComputerMover]
     });
   });
 

@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { ScoreBoardComponent } from './score-board.component';
 import {GameService} from "../game-service/game.service";
+import {ComputerMover} from '../game-service/computer-mover';
 
 describe('ScoreBoardComponent', () => {
   let component: ScoreBoardComponent;
@@ -13,7 +14,7 @@ describe('ScoreBoardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ScoreBoardComponent ],
-      providers: [GameService]
+      providers: [GameService, ComputerMover]
     })
     .compileComponents();
   }));

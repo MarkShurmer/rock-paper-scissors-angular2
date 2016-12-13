@@ -8,6 +8,7 @@ import {PlayingPieceComponent} from "../playing-piece/playing-piece.component";
 import {GameService} from "../game-service/game.service";
 import {Piece} from "../models/piece";
 import {PieceType} from "../models/pieceType";
+import {ComputerMover} from '../game-service/computer-mover';
 
 
 class MockGameService {
@@ -29,7 +30,7 @@ describe('ResultComponent', () => {
         mockService = new MockGameService();
         TestBed.configureTestingModule({
             declarations: [ResultComponent, PlayingPieceComponent],
-            providers: [{provide: GameService, useValue: mockService}]
+            providers: [{provide: GameService, useValue: mockService}, ComputerMover]
         })
             .compileComponents();
     }));

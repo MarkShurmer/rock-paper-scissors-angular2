@@ -6,8 +6,4 @@ export class Piece {
     constructor(pieceType: PieceType) {
         this.pieceType = pieceType;
     }
-
-    isItMatching(otherPiece: Piece) {
-        return this.pieceType === otherPiece.pieceType;
-    }
 }

@@ -9,6 +9,7 @@ import {PlayingPieceComponent} from "../playing-piece/playing-piece.component";
 import {Piece} from "../models/piece";
 import {PieceType} from "../models/pieceType";
 import {Observable} from "rxjs";
+import {ComputerMover} from '../game-service/computer-mover';
 
 let isPlayerMove = true;
 
@@ -30,7 +31,7 @@ describe('PlayerControlComponent', () => {
         mockService = new MockGameService();
         TestBed.configureTestingModule({
             declarations: [PlayerControlComponent, PlayingPieceComponent],
-            providers: [{provide: GameService, useValue: mockService}]
+            providers: [{provide: GameService, useValue: mockService}, ComputerMover]
         })
             .compileComponents();
     }));

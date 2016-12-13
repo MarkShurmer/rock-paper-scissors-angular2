@@ -13,7 +13,9 @@ module.exports = function (config) {
             require('angular-cli/plugins/karma')
         ],
         files: [
-            {pattern: './src/test.ts', watched: false}
+            './node_modules/phantomjs-polyfill-find/find-polyfill.js',
+            {pattern: './src/test.ts', watched: false},
+
         ],
         preprocessors: {
             './src/test.ts': ['angular-cli']
