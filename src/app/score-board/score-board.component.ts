@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GameService} from "../game-service/game.service";
 
 @Component({
   selector: 'rps-score-board',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScoreBoardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {
   }
 
+  getScore() {
+    return this.gameService.getScore();
+  }
 }

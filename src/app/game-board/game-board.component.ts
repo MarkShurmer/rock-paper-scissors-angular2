@@ -1,4 +1,5 @@
-import {Component, OnInit, HostBinding} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {GameService} from "../game-service/game.service";
 
 @Component({
   selector: 'rps-game-board',
@@ -6,11 +7,12 @@ import {Component, OnInit, HostBinding} from '@angular/core';
   styleUrls: ['game-board.component.scss']
 })
 export class GameBoardComponent implements OnInit {
-  //@HostBinding('class') hostClass = 'game-board';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
+
 
 }

@@ -3,13 +3,24 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import {GameBoardComponent} from "./game-board/game-board.component";
+import {ScoreBoardComponent} from "./score-board/score-board.component";
+import {PlayingPieceComponent} from "./playing-piece/playing-piece.component";
+import {ResultComponent} from "./result/result.component";
+import {PlayerControlComponent} from "./player-control/player-control.component";
+import {GameService} from "./game-service/game.service";
 
 describe('App: RockPaperScissors', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent, GameBoardComponent
+        AppComponent,
+        GameBoardComponent,
+        PlayingPieceComponent,
+        ScoreBoardComponent,
+        PlayerControlComponent,
+        ResultComponent
       ],
+      providers: [GameService]
     });
   });
 

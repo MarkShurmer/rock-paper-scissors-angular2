@@ -2,7 +2,7 @@ import {Component, OnInit, Input} from '@angular/core';
 import {PieceType} from "../models/pieceType";
 import {Piece} from "../models/piece";
 import {isUndefined} from "util";
-
+import {isNull} from "util";
 
 @Component({
     selector: 'rps-playing-piece',
@@ -20,10 +20,10 @@ export class PlayingPieceComponent implements OnInit {
 
     getPlayingPiece() {
         // get asset name
-        if(isUndefined(this.piece)) {
+        if(isUndefined(this.piece) || isNull(this.piece)) {
             return "";
         } else {
-            return `/assets/${PieceType[this.piece.pieceType]}.jpg`;
+            return `/assets/${PieceType[this.piece.pieceType]}.png`;
         }
     }
 }

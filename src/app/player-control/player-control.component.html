@@ -1,10 +1,11 @@
-<div class="player-control">
-  <p>Please choose the go that you wish to make</p>
-  <p>Then the computer will try</p>
-  <!--<div>-->
-    <!--<img class="player-piece" src="../../assets/rock.jpg">-->
-  <!--</div>-->
-  <rps-playing-piece [piece]="rock"></rps-playing-piece>
-  <rps-playing-piece [piece]="paper"></rps-playing-piece>
-  <rps-playing-piece [piece]="scissors"></rps-playing-piece>
+<div class="player-control" [ngClass]="isPlayerMove() ? 'player-moving' : 'player-moved'">
+    <h2>Player move</h2>
+    <p>Please make your selection by clicking on rock, paper or scissors</p>
+    <p>Then the computer will have a go, and you will score if computer guesses wrong</p>
+
+    <div *ngFor="let piece of playPieces">
+        <a (click)="play(piece)">
+            <rps-playing-piece [piece]="piece"></rps-playing-piece>
+        </a>
+    </div>
 </div>

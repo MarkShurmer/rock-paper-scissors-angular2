@@ -1,3 +1,10 @@
-<p>
-  result works!
-</p>
+<div class="result">
+  <h2>The turn</h2>
+  <span *ngIf="getPlayerMove()">
+    <p>The play was</p>
+    <p>Player</p>
+    <rps-playing-piece [piece]="getPlayerMove()"></rps-playing-piece>
+    <p>Computer</p>
+    <rps-playing-piece [piece]="getComputerMove()"></rps-playing-piece>
+  </span>
+</div>
